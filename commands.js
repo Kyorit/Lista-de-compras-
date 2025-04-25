@@ -255,7 +255,7 @@ function atualizaComparador(event){
     let final = $(`#comparador${id} .precoPorUnidade`)[0]
     let total = preco/quantidade;
     
-    final.textContent = total ? total : "0.00";
+    final.textContent = total ? parseFloat(total).toFixed(2) : "0.00";
 }
 
 
