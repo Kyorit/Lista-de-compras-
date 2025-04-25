@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    </head>
+    <body>
+        <header>
+            <p>Lista de Compras</p>
+            <p>Lista Precificada</p>
+            <p>Comparar Preços</p>
+        </header>
+
+        <main>
+            <section id="listaCompras" class="">
+                <input type="text" name="entradaLista" id="entradaLista" ></input type="text">
+                <ul>
+                    Lista Compras:
+
+                </ul>
+            </section>
+
+            <section id="telaCompras" class="hidden">
+                <article id="listaPrecificada">
+                    <article id="produto1">
+                        <h3>produto</h3>
+                        <div>
+                            <div>
+                                <div class="quantidade">
+                                    <button>-</button>
+                                    <p>0</p>
+                                    <button>+</button>
+                                </div>
+                                <div class="precoProduto">
+                                    <p>R$</p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="total">
+                                <h4>Total</h4>
+                                <p>R$ <span>0,00</span></p>
+                            </div>
+                        </div>
+                    </article>
+    
+                </article>
+                <div id="totalCompra">
+                    <p>Total Compra = R$ <span id="totalCompraValor">0.00</span></p>
+                </div>
+            </section>
+
+            <section id="comparadorPrecos" class="hidden">
+                <article>
+                    <article id="listaComparadores">
+                        <div id="comparador1" class="comparador">
+                            <h2>Produto 1</h2>
+                            <div>
+                                <div class="entrada">
+                                    <fieldset>
+                                        <legend>Preço</legend>
+                                        <input type="text" class="preco">
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Quantidade</legend>
+                                        <input type="number" class="quantidade">
+                                    </fieldset>
+                                </div>
+                                <div class="precoUnidade">
+                                    <fieldset>
+                                        <legend>Preço / Unidade</legend>
+                                        <p>R$ <span class="precoPorUnidade">0.00</span></p>
+                                    </fieldset>
+                                    <button onclick="limparCampos(event)">Limpar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="botoes">
+                        <button onclick="removerComparador()">-</button>
+                        <button onclick="adicionarComparador()">+</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script src="commands.js"></script>
+    </body>
+</html>
