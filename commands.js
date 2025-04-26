@@ -191,7 +191,7 @@ function atualizarListaPrecificada(){
                                 </div>
                                 <div class="precoProduto">
                                     <p>R$</p>
-                                    <input value="${produto.preco}" type="text">
+                                    <input value="${produto.preco}" type="number">
                                 </div>
                             </div>
                             <div class="total">
@@ -217,7 +217,7 @@ function adicionarComparador(){
                     <div class="entrada">
                         <fieldset>
                             <legend>Preço</legend>
-                            <input type="text" class="preco">
+                            <input type="number" class="preco">
                         </fieldset>
                         <fieldset>
                             <legend>Quantidade</legend>
